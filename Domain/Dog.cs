@@ -13,34 +13,35 @@ namespace ConsoleTamagotchi.Domain
 
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Ваф!");
+            return "Гав-Гав!";
         }
 
-        public override void Feed()
+        public override string Feed()
         {
-            base.Feed();
-            Console.WriteLine("Собака виляет хвостом и чавкает!");
+            // Вызываем базовый метод, получаем строку, добавляем свою
+            string baseMessage = base.Feed();
+            return baseMessage + " Собака виляет хвостом!";
         }
 
-        public override void Play()
+        public override string Play()
         {
-            base.Play();
-            Console.WriteLine("Теперь собака довольна и чуток подустала!");
+            string baseMessage = base.Feed();
+            return baseMessage + $"{MakeSound()} Теперь собака довольна и чуток подустала!";
         }
 
-        public override void ToCaress()
+        public override string ToCaress()
         {
-            base.ToCaress();
-            Console.WriteLine("Счастливый Ваф!");
+            string baseMessage = base.ToCaress();
+            return baseMessage + "Счастливый Ваф!";
 
         }
 
-        public override void Walk()
+        public override string Walk()
         {
-            base.Walk();
-            Console.WriteLine("Собака набегалась на улице и нагавкалась на собак за оградами!");
+            string baseMessage = base.Walk();
+            return baseMessage + "Собака набегалась на улице и нагавкалась на собак за оградами!";
         }
 
     }

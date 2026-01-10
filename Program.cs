@@ -21,7 +21,7 @@ namespace ConsoleTamagotchi
             else if (type == "2") myPet = new Cat(name);
             else { return; }
 
-            while (myPet.Health > 0)
+            while (myPet.IsDied == false)
             {
                 Console.Clear();
                 Console.WriteLine($"--- {myPet.Name} ---");
@@ -32,12 +32,24 @@ namespace ConsoleTamagotchi
 
                 switch (action)
                 {
-                    case "1": myPet.Feed(); break;
-                    case "2": myPet.Play(); break;
-                    case "3": myPet.ToCaress(); break;
-                    case "4": myPet.Sleep(); break;
-                    case "5": myPet.Walk(); break;
-                    case "6": myPet.Heal(); break;
+                    case "1":
+                        Console.WriteLine(myPet.Feed());
+                        break;
+                    case "2":
+                        Console.WriteLine(myPet.Play());
+                        break;
+                    case "3":
+                        Console.WriteLine(myPet.ToCaress());
+                        break;
+                    case "4":
+                        Console.WriteLine(myPet.Sleep());
+                        break;
+                    case "5":
+                        Console.WriteLine(myPet.Walk());
+                        break;
+                    case "6":
+                        Console.WriteLine(myPet.Heal());
+                        break;
                     case "7": return;
                 }
 
@@ -51,7 +63,7 @@ namespace ConsoleTamagotchi
                     break;
                 }
             }
-            if (myPet.Health == 0)
+            if (myPet.IsDied == true && myPet.Years != 20)
             {
                 Console.WriteLine("R.I.P. Ваш питомец умер...");
             }
