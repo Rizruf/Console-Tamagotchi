@@ -18,9 +18,9 @@ namespace ConsoleTamagotchi.Domain
             return "Мяф!";
         }
 
-        public override string Feed()
+        public override string Feed(Food food)
         {
-            string baseMessage = base.Feed();
+            string baseMessage = base.Feed(food);
             return baseMessage + "Мрррр... Чавк Чавк Чавк...";
         }
 

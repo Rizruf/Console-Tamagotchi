@@ -119,18 +119,29 @@ namespace ConsoleTamagotchi.Domain
             }
         }
 
+        public string Wait()
+        {
+            _hunger += 5; // Чуть проголодался, пока ждал
+            _stamina -= 5; // Чуть устал от скуки
+
+            PassTime();      // Время прошло
+            NormalizeStats(); // Проверки на смерть
+
+            return $"{Name} скучал, пока вы были на работе.";
+        }
+
         // --- МЕТОДЫ ДЕЙСТВИЙ (PUBLIC) ---
 
-        public virtual string Feed()
+        public virtual string Feed(Food food)
         {
             _health += 10;
-            _hunger -= HungerStep;
+            _hunger -= food.NutritionalValue;
             _stamina -= 5;
 
             PassTime();
             NormalizeStats();
 
-            return $"{Name} вкусно покушал. Ням-ням!";
+            return $"{Name} с удовольствием съел {food.Name} и восстановил {food.NutritionalValue} голода.";
         }
 
         public virtual string Play()

@@ -18,16 +18,16 @@ namespace ConsoleTamagotchi.Domain
             return "Гав-Гав!";
         }
 
-        public override string Feed()
+        public override string Feed(Food food)
         {
             // Вызываем базовый метод, получаем строку, добавляем свою
-            string baseMessage = base.Feed();
+            string baseMessage = base.Feed(food);
             return baseMessage + " Собака виляет хвостом!";
         }
 
         public override string Play()
         {
-            string baseMessage = base.Feed();
+            string baseMessage = base.Play();
             return baseMessage + $"{MakeSound()} Теперь собака довольна и чуток подустала!";
         }
 
