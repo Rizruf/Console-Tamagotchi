@@ -126,7 +126,7 @@ namespace ConsoleTamagotchi
                                 Console.WriteLine(" ---Товары--- ");
                                 for (int i = 0; i < product.Count; i++)
                                 {
-                                    Console.WriteLine($"Товар {i + 1} {product[i].Name} - питательность: {product[i].NutritionalValue}");
+                                    Console.WriteLine($"Товар {i + 1} {product[i].Name} - питательность: {product[i].NutritionalValue}, цена {product[i].Cost}");
                                 }
 
                                 Console.WriteLine("Продавец: Что выбираете? (номер)");
