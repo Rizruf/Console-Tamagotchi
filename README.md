@@ -1,7 +1,7 @@
 # Console Tamagotchi
 
-![Gameplay Preview](<img width="1329" height="521" alt="preview" src="https://github.com/user-attachments/assets/54e69f5a-669e-49f4-957f-fc732fc942ea" />)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat&logo=dotnet)
+![Gameplay Preview](preview.png)
+![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat&logo=dotnet)
 ![C#](https://img.shields.io/badge/C%23-100%25-239120?style=flat&logo=c-sharp)
 ![Architecture](https://img.shields.io/badge/Architecture-Layered-blueviolet)
 ![License](https://img.shields.io/badge/License-MIT-blue)
