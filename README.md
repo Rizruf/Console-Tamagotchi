@@ -29,7 +29,7 @@ It simulates the life cycle of a pet with complex internal states, an economic s
 
 ### Tech Stack
 Language: C# 12
-Framework: .NET 8.0
+Framework: .NET 9.0
 IDE: Visual Studio 2022
 Concepts: List<T>, Enums, Control Flow, Constructors, Properties.
 
